@@ -1,0 +1,30 @@
+PUNTO 3 
+    ITEM A)
+        Crearia una tabla centroSalud en DB (id, nombre, direccion) y una columna id_centro_fk en 
+        la tabla Lote, para poder indentificar a que centro fue asignado cada lote.
+        
+        Una columna usado: boolean en lote para marcarlos de esa manera (En la vista, si el usuario ingresó
+        con una cuenta de municipio se puede mostrar un boton "marcar como usado" que al ser seleccionado
+        el router dirija a LoteController que vuelva a verificar que es un municipio y en caso de afirmarlo
+        va a pedir al modelo que lo marque como usado en la DB. Despues el controlador manda a la vista 
+        para que  se actualice)
+
+        Aqui el punto de vista del modelo de la DB.
+
+        Un ej de esto...
+        Podria ser que cuando el usuario selecciona el link, para entrar a la vista de los lotes, el router
+        se dirija a LoteController, que es el que va a verificar que se haya ingresado con una cuenta
+        de municipio para luego pedirle al modelo el listado de lotes con un join para traer tambien los
+        datos de los centros de salud. El modelo lo devuelve y el controlador se la envia a la vista para
+        que se actualice.
+
+        El ultimo punto del listado, cuando se pide la informacion de los lotes se llame a la funcion getLotes()
+        del archivo lotes.js que es el encargado de hacer el fetch con una URL de la API y el metodo GET, el router
+        de la API dirije al controlador y éste al modelo, modelo a BD, lo devuelve al controlador éste lo manda a la vista.
+
+    ITEM C)
+        Solicitarian esas funcionalidades a travez de las API para poder acceder a la carga mas rapida de
+        los cambios, sin la necesidad de recargar la pag.
+
+
+

@@ -1,0 +1,3 @@
+# Ignorar todo lo que este en template_c
+/templates_c
+/cache
